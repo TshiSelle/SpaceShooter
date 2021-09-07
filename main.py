@@ -1,16 +1,12 @@
 import pygame
 import os
-from tkinter import *
-from tkinter.ttk import *
+
 import time
 import random
 
-WIN = Tk()
-#WIN.title('Space Shooter')
-#WIN.geometry('1920x1080')
-WIN.resizable(True, True)
-WIDTH, HEIGHT = 1920, 1080
-WIN = pygame.display.set_mode((WIDTH, HEIGHT))
+
+WIDTH, HEIGHT = 750, 750
+WIN = pygame.display.set_mode((WIDTH, HEIGHT), pygame.RESIZABLE)
 pygame.display.set_caption("Space Shooter")
 
 #importing enemy ships assets
@@ -33,11 +29,18 @@ BG = pygame.image.load(os.path.join("assets", "background.png"))
 def main():
   run = True
   FPS = 160
+  level = 1
+  lives = 5
   clock = pygame.time.Clock()
   
+  def refactor_window():
+    WIN.blit(BG, (0, 0))
+    pygame.display.update()
   while run:
     clock.tick(FPS)
+    refactor_window()
     
     for event in pygame.event.get():
       if event.type == pygame.QUIT:
         run = False
+main()
