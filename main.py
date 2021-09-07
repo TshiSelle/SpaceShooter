@@ -1,10 +1,14 @@
 import pygame
 import os
+from tkinter import *
+from tkinter.ttk import *
 import time
 import random
 
-WIDTH, HEIGHT = 1920, 1080
-WIN = pygame.display.set_mode((WIDTH, HEIGHT))
+WIN = Tk()
+WIN.title('Space Shooter')
+WIN.geometry('1920x1080')
+WIN.resizable(True, True)
 
 #importing enemy ships assets
 ENEMEY_SHIP_ONE = pygame.image.load(os.path.join("assets", ""))
