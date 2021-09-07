@@ -16,3 +16,6 @@ LASER_SHIP_THREE = pygame.image.load(os.path.join("assets", ""))
 #importing player ship asset
 PLAYER_SHIP = pygame.image.load(os.path.join("assets", ""))
 LASER_PLAYER = pygame.image.load(os.path.join("assets", ""))
+
+#importing background
+BG = pygame.image.load(os.path.join("assets", "background.png"))
